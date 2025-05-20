@@ -7,6 +7,7 @@ window.onload = function () {
   let que = ['mi discurso', 'mis calzoncillos', 'mi cuenta de 4Geeks', 'todas mis cervezas', 'mis gafas'];
   let cuando = ['cuando estaba trabajando en este proyecto', 'a la hora de merendar', 'mientras estaba en el altar a punto de casarme', 'mientras ponía esta excusa', 'mientras este caminaba por el bosque', 'mientras este me insultaba'];
 
+  // Almaceno en estas variables el estado actual de cada parte de la excusa
   let currentQuien = '';
   let currentHizo = '';
   let currentQue = '';
@@ -31,7 +32,7 @@ window.onload = function () {
 
   generarExcusa();
 
-  // Evento para botón "Prueba otra vez"
+  // Botón "Generar nueva excusa"
   document.getElementById("tryAgainButton").addEventListener("click", function () {
     generarExcusa();
     this.blur();
