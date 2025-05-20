@@ -1,27 +1,61 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pedro Serrano Camblor: proyecto Generador de Excusas.js</title>
 
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <h1>Generador de Excusas</h1>
-    <p id="excusa">Esta es una excusa genérica temporal</p>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./assets/img/4geeks.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedro Serrano Camblor: proyecto Generador de Excusas.js</title>
 
-    <button id="tryAgainButton">Prueba otra vez</button>
+  <!-- Fontawesome is our recomended library for icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+</head>
 
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
-  </body>
+<body class="bg-dark vh-100">
+  <div class="container text-center d-flex flex-column justify-content-center align-items-center h-100">
+
+    <div class="row w-100 p-3 bg-info bg-opacity-10 border border-info border-start-0 border-end-0 my-2">
+      <div class="col-12">
+        <h1 class="text-light">Generador de Excusas</h1>
+      </div>
+    </div>
+
+    <div class="row w-100 my-2">
+      <div class="col-12">
+        <p id="excusa" class="text-light fs-3">
+          <span id="quien" class="bg-primary bg-opacity-50 rounded px-1">Esta parte es Quien</span>
+          <span id="hizo" class="bg-success bg-opacity-50 rounded px-1">Esta parte es Hizo</span>
+          <span id="que" class="bg-warning bg-opacity-50 text-dark rounded px-1">Esta parte es Qué</span>
+          <span id="cuando" class="bg-danger bg-opacity-50 rounded px-1">Esta parte es Cuando</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="row w-100 justify-content-center g-2">
+      <div class="col-auto">
+        <button id="nuevoQuien" class="btn btn-primary">Nuevo: Quien</button>
+      </div>
+      <div class="col-auto">
+        <button id="nuevoHizo" class="btn btn-success">Nuevo: Hizo</button>
+      </div>
+      <div class="col-auto">
+        <button id="nuevoQue" class="btn btn-warning text-dark">Nuevo: Qué</button>
+      </div>
+      <div class="col-auto">
+        <button id="nuevoCuando" class="btn btn-danger">Nuevo: Cuando</button>
+      </div>
+    </div>
+
+    <div class="row w-100 justify-content-center mt-4">
+      <div class="col-auto">
+        <button id="tryAgainButton" class="btn btn-info btn-lg text-dark fw-bold">Generar nueva excusa</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+
 </html>
